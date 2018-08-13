@@ -3,7 +3,6 @@ import Vuex from 'vuex';
 import Net from './utils/Net'
 import {
   NetworkException,
-  ResponseException
 } from './utils/Exception';
 
 Vue.use(Vuex)

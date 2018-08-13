@@ -94,10 +94,6 @@ function createApiMethod(axiosInstance, configMap) {
             let _dataid = dataIds[name];
 
             result[name] = function (_param) {
-                let payload = {
-                    _dataid,
-                    _param
-                };
                 return axiosInstance({
                     url: _dataid,
                     method: method,

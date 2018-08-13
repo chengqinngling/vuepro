@@ -4,7 +4,7 @@
  * @author DIEW
  */
 module.exports = {
-    baseUrl: '',//Type: string
+    baseUrl: '/',//Type: string
     outputDir: "dist",//Type: string Default: 'dist'当运行 vue-cli-service build 时生成的生产环境构建文件的目录。注意目标目录在构建之前会被清除 (构建时传入 --no-clean 可关闭该行为)。
     assetsDir: "assets",//Type: string; Default: ''; 放置生成的静态资源 (js、css、img、fonts) 的目录。
     lintOnSave: true,//Type: boolean Default: true 是否在开发环境下通过 eslint-loader 在每次保存时 lint 代码
@@ -19,9 +19,14 @@ module.exports = {
             sass: {
                 // @/ 是 src/ 的别名
                 // 所以这里假设你有 `src/variables.scss` 这个文件
-                // data: `@import "@/variables.scss";`
-                data: ``
-            }
+                // data: `@import "@/styles/common.module.scss";`
+            },
+            postcss: {
+                // 这里的选项会传递给 postcss-loader
+            },
+            css: {
+                // 这里的选项会传递给 css-loader
+            },
         },//Type: Object Default: {}
     },
     devServer: {
